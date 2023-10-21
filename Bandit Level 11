@@ -1,0 +1,45 @@
+Overthewire bandit
+
+Level 0
+The host to which we  need to connect is bandit.labs.overthewire.org on port 2220.username is bandit0 and the password is bandit0. The password for the next level was stored in a file called readme , in the home directory.
+Here, you need to read the content of the readme file with the command cat.
+Cat command  is used to read  data from the file and give its content as output.
+Level1
+The password for the next level is stored in a file called " -  " located in the home directory
+As '-'  means reading from or to stdin in a shell, its necessary to specify a path to read the file. 
+Level2
+The password for the next level is stored in a file called "spaces in this filename "located in the home directory.
+Here you must make use of \ or " " while reading data using spaces in this filename
+Level3
+The password for the next level is stored in  file in the "inhere" directory.
+Here ,a hidden file is any file that begins with a ”.”. When a file is hidden it can not been seen with the bare ls command.in order to see hidden files using the ls command ,add the -a switch.
+Level4
+The password for the next level is stored in the inhere directory. 
+
+Level5
+The password for the next level is stored in a file in the inhere directory 
+ The find command is used to  look for a specific file. Here, we use the -readable,! -executable and -size 1033c parameters to find a file .
+Level6
+The password for the next level is stored somewhere on the server has group bandit6, user is bandit7. Here we used command grep to Search for a specific string in an output.
+Level7
+The password for the next level is stored in the file data.txt .Here we use the -exec argument of find with the grep command to find the file containing the word millionth.
+
+Level8
+For the next level the password  is stored in the file data.txt and has the only line of text that occurs only once.
+First we use sort to sort alphabetically the data in the data.txt file then, we use uniq to count the number of  occurances and find that one line of text that occurs only once.
+
+Level9
+The password for the next level is stored in the file data.txt in a strings,begins  with several ‘=’ characters.
+The strings command helps us to find the string then grep finds string beginning with several ‘=’ characters.
+Level10
+The password for the next level is stored in the file data.txt which contains base64 encoded data.
+Read the data.txt and redirect the output to the base64 command. The -d argument is used to decode the string.
+Base64 is a binary to a text encoding scheme that represents binary data in an American Standard Code for Information Interchange (ASCII) string format
+
+Level11
+The next level is cleared by inserting password stored in the file data.txt.
+Here  all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions.
+The tr command is used to translate the first set of characters 'A-Za-z 'to 'N-ZA-Mn-za-m '.
+tr  command is used to translate or delete characters from standard input and writes the result to standard output .
+
+
